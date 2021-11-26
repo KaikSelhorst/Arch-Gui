@@ -1,0 +1,128 @@
+/* Pressets*/
+:root{
+    --menu_text_size:18px;
+    --text_weight:600;
+    --text_color:white;
+    --blue:#1793D1;
+    --background:#1d1c1c;
+}
+
+/* Header (conteiner Menu) Style*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 15px;
+    max-width: 1440px;
+    height: 120px;
+    background:var(--background);
+}
+/*setting logo size according to its container*/
+.logo{
+    max-width: 185px;
+    max-height: 55px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    padding: 15px;
+}
+
+/* Navigation Style and Edition Style*/
+nav a,.edition{
+    font-size: var(--menu_text_size);
+    font-weight: var(--text_weight);
+    color: var(--text_color);
+
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: ease .5s;
+}
+/*added a border to each menu link*/
+nav a:hover {
+    border-bottom:2px solid var(--blue);
+}
+
+/* These Attributes cause the "edition" items to be next to their brother or center-aligned*/
+.edition{
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+/*Set the Indicator Size next to the "edition" item*/
+.edition-indicator{
+    width: 28px;
+    height: 28px;
+    transition: .5s;
+}
+/* When the mouse hovers over the "edition" the "edition-indicator" will rotate 180 degrees*/
+.edition:hover .edition-indicator {
+    transform:rotate(180deg);
+}
+
+
+
+/*option Style*/
+.option {
+    display: block;
+    position: absolute;
+    background: var(--background);
+
+
+    overflow-y: hidden;
+    visibility: hidden;
+    border-bottom: none;
+
+    height: 0px;
+}
+
+/*Style Option */
+.option a {
+    border-left: 2px solid transparent;
+    border-bottom: none;
+
+    transition: 0.2s;
+}
+/* These attributes make the Menu edition have a Right Edge when hovering over */
+.option a:hover {
+
+    border-bottom: none;
+    border-left: 2px solid var(--blue);
+}
+/*These styles make that when the mouse hovers over the edition, the menu appears */
+.edition:hover .option {
+    display: block;
+    position: absolute;
+    visibility: visible;
+
+    height: 400px;
+    top: 70px;
+
+    transition: 0.5s;
+}
+
+/*Menu for 1024px width*/
+
+@media(max-width:1024px){
+    /* Header Padding Modifications*/
+    header{
+        padding: 15px 20px;
+    }
+    /* Logo Size Modifications*/
+    .logo{
+        max-width: 158px;
+        max-height: 47px;
+    }
+    /* Adding a margin between menu links */
+    nav a {
+        margin: 0px 10px;
+    }
+    /* Added a greater distance from the top of the site so that the "Editions" menu is NOT covered */
+    .edition:hover .option  {
+        top: 85px;
+    }
+}
