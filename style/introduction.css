@@ -1,0 +1,49 @@
+:root {
+    --background-color:#1D1C1C;
+    --title-color:#1793D1;
+    --text-all-color:#fff;
+    --sub-title-weight:400;
+    --sub-title-font:15px;
+    --title-weight:700;
+    --title-font:48px;
+}
+
+.introduction {
+    background: var(--background);
+    text-align: center;
+    max-width: 1440px;
+    transition: .3s;
+    height: 500px;
+}
+
+.introduction-text{
+   color: var(--text-all-color);
+   padding-top: 81px;
+}
+.introduction-text-h1{
+    color:var(--title-color) ;
+}
+.introduction-text h1{
+    font-weight: var(--title-weight);
+    font-size: var(--title-font);
+}
+
+.introduction-text h3{
+    font-weight: var(--sub-title-weight);
+    font-size: var(--sub-title-font);
+    padding-top: 5px;
+}
+
+@media(max-width:1024px){
+    .introduction{
+        transition: .3s;
+        height: 340px;
+    }
+}
+
+@media(max-width:428px){
+    .introduction {
+        transition: .3s;
+        height: 300px;
+    }
+}

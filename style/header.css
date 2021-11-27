@@ -108,7 +108,7 @@ the "Edition" menu option only happen above 769px width(screen)*/
     }
     
 }
-/*Menu for 1024px width*/
+/* This media quary will only work on devices with a screen less than 1024px wide (" Small desktop devices") */
 @media(max-width:1024px){
     /* Header Padding Modifications*/
     header{
@@ -128,7 +128,7 @@ the "Edition" menu option only happen above 769px width(screen)*/
         top: 85px;
     }
 }
-/*Menu for 768px width*/
+/*This Media quary will only work on devices with a screen less than 768px wide("tablet")*/
 @media(max-width:768px){
 
     #conteiner-menu {
@@ -218,7 +218,7 @@ the "Edition" menu option only happen above 769px width(screen)*/
 
 
 }
-/*Menu for 428px width*/
+/*This Media quary will only work on devices with a screen less than 428px wide("smartphone")*/
 @media(max-width:428px){
     .logo-desktop{
         display: none;
