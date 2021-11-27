@@ -9,104 +9,106 @@
 
 /* Header (conteiner Menu) Style*/
 header{
-    display: flex;
     justify-content: space-between;
+    background:var(--background);
     align-items: center;
-
     padding: 0px 15px;
     max-width: 1440px;
     height: 120px;
-    background:var(--background);
+    display: flex;
 }
 /*setting logo size according to its container*/
 .logo{
     max-width: 185px;
     max-height: 55px;
 }
+.logo-mobile{
+    display: none;
+}
 
 nav ul{
-    display: flex;
     list-style: none;
+    display: flex;
 }
 nav ul li {
     padding: 15px;
 }
-
 /* Navigation Style and Edition Style*/
 nav a,.edition{
+    border-bottom: 2px solid transparent;
     font-size: var(--menu_text_size);
     font-weight: var(--text_weight);
     color: var(--text_color);
-
     text-decoration: none;
-    border-bottom: 2px solid transparent;
     transition: ease .5s;
 }
 /*added a border to each menu link*/
 nav a:hover {
     border-bottom:2px solid var(--blue);
 }
-
 /* These Attributes cause the "edition" items to be next to their brother or center-aligned*/
 .edition{
-    cursor: pointer;
     align-items: center;
+    cursor: pointer;
     display: flex;
 }
 /*Set the Indicator Size next to the "edition" item*/
 .edition-indicator{
-    width: 28px;
+    transition:.5s;
     height: 28px;
-    transition: .5s;
+    width: 28px;
 }
-/* When the mouse hovers over the "edition" the "edition-indicator" will rotate 180 degrees*/
-.edition:hover .edition-indicator {
-    transform:rotate(180deg);
+#check-menu{
+    display: none;
 }
-
-
-
 /*option Style*/
 .option {
-    display: block;
-    position: absolute;
     background: var(--background);
-
-
+    border-bottom: none;
+    position: absolute;
     overflow-y: hidden;
     visibility: hidden;
-    border-bottom: none;
-
+    display: block;
     height: 0px;
 }
-
 /*Style Option */
 .option a {
+    text-transform:uppercase;
     border-left: 2px solid transparent;
     border-bottom: none;
-
     transition: 0.2s;
 }
 /* These attributes make the Menu edition have a Right Edge when hovering over */
 .option a:hover {
-
-    border-bottom: none;
     border-left: 2px solid var(--blue);
+    border-bottom: none;
 }
-/*These styles make that when the mouse hovers over the edition, the menu appears */
-.edition:hover .option {
-    display: block;
-    position: absolute;
-    visibility: visible;
-
-    height: 400px;
-    top: 70px;
-
-    transition: 0.5s;
+#check-menu-mobile{
+    display: none;
+} 
+#edition-mobile{
+    cursor: pointer;
 }
+/* This Media Query makes the hover animation of 
+the "Edition" menu option only happen above 769px width(screen)*/
+@media(min-width:769px){
+    /* When the mouse hovers over the "edition" the "edition-indicator" will rotate 180 degrees*/
+    .edition:hover .edition-indicator {
+        transform:rotate(180deg);
+    }
 
+    /*These styles make that when the mouse hovers over the edition, the menu appears */
+    .edition:hover .option {
+        visibility: visible;
+        position: absolute;
+        transition: 0.5s;
+        display: block;
+        height: 400px;
+        top: 70px;
+    }
+    
+}
 /*Menu for 1024px width*/
-
 @media(max-width:1024px){
     /* Header Padding Modifications*/
     header{
@@ -124,5 +126,118 @@ nav a:hover {
     /* Added a greater distance from the top of the site so that the "Editions" menu is NOT covered */
     .edition:hover .option  {
         top: 85px;
+    }
+}
+/*Menu for 768px width*/
+@media(max-width:768px){
+
+    #conteiner-menu {
+        position: absolute;
+        overflow-y: hidden;
+        transition: .2s;
+        display: block;
+        right: -150px;
+        height: 0px;
+        width: 0px;
+        top: 120px;
+    }
+    /* Btn-mobile Style */
+    .btn-mobile label {
+        display: block;
+    }
+    #btn-mobile-span {
+        border-top: 2px solid var(--blue);
+        position: relative;
+        transition: .2s;
+        display: block;
+        content: "";
+        width: 30px;
+        height: 2px;
+    }
+
+    #btn-mobile-span::before{
+        border-top: 2px solid var(--blue);
+        position: relative;
+        transition: .2s;
+        display: block;
+        margin-top:5px;
+        content: "";
+        width: 30px;
+        height: 2px;
+    
+    }
+
+    #btn-mobile-span::after{
+        border-top:2px solid var(--blue);
+        position:relative;
+        margin-top:5px;
+        transition:.2s;
+        display:block;
+        height:2px;
+        width:30px;
+        content:"";
+    }
+    #check-menu:checked + .btn-mobile #btn-mobile-span {
+        border-top-color: transparent;
+        top: -10px;
+    }
+    #check-menu:checked + .btn-mobile #btn-mobile-span::before{
+        transform: rotate(135deg);
+        transition: .5s;
+        top: 9px;
+        
+    }
+    #check-menu:checked + .btn-mobile #btn-mobile-span::after{
+        transform: rotate(-135deg);
+        transition: .5s;
+    }
+
+    #check-menu:checked + .btn-mobile #conteiner-menu {
+        background: var(--background);
+        overflow-y: visible;
+        position: absolute;
+        transition: .5s;
+        display: block ;
+        height: 500px;
+        width: 200px;
+        right: 0px;
+    }
+
+    #check-menu-mobile:checked + #edition-mobile-conteiner .option{
+        background: var(--background);
+        overflow-y: visible;
+        visibility: visible;
+        border-bottom: none;
+        position: absolute;
+        transition: .4s;
+        display: block;
+        height: 505px;
+        right: 200px;
+        top: -5px;
+    }
+
+
+}
+/*Menu for 428px width*/
+@media(max-width:428px){
+    .logo-desktop{
+        display: none;
+    }
+    .logo-mobile {
+        display: block;
+    }
+    .logo{
+        text-align: center;
+        max-height: 52.8px;
+        max-width: 54px;
+    }
+
+    #check-menu:checked + .btn-mobile #conteiner-menu{
+        width: 200px;
+    }
+
+    #check-menu-mobile:checked + #edition-mobile-conteiner .option{
+        transition: .4s;
+        right: 200px;
     }
 }

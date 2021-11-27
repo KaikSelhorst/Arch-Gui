@@ -23,37 +23,52 @@
     <header>
 		<!--Container responsible for the website logo-->
 		<div class="logo">
-			<a href="">
+			<a href="" class="logo-desktop">
 				<img src="./assets/header-icons/logo_header.png" alt="Arch Linux Icon">
+			</a>
+			<a href="" class="logo-mobile">
+				<img src="./assets/header-icons/logo_header_mobile.png" alt="Arch Linux Icon">
 			</a>
 		</div>
 		<!--Container responsible for the Navigation Menu-->
 		<nav>
-			<!-- Navigation Menu -->
-			<ul>
-				<!--Access to the Editions Menu-->
-				<li class="edition">
-					<!--Menu Indicator-->
-					<div class="edition-indicator">
-						<img src="./assets/header-icons/next .png" alt="">
-					</div>
-					EDITIONS
-					<!--Edition Menu Options-->
-					<ul class="option">
-						<li><a href="">KDE PLASMA</a></li>
-						<li><a href="">GNOME</a></li>
-						<li><a href="">XFCE </a></li>
-						<li><a href="">Cinnamon</a></li>
-						<li><a href="">MATE</a></li>
-						<li><a href="">I3</a></li>
-						<li><a href="">BSPWM</a></li>
-						<li><a href="">Zen EDITION</a></li>
+			<div>
+				<input type="checkbox" id="check-menu">
+				<div class="btn-mobile">
+					<label for="check-menu" >
+						<span id="btn-mobile-span"></span>
+					</label>
+					<!-- Conteiner Menu -->
+					<ul id="conteiner-menu">
+						<!--Access to the Editions Menu-->
+						<li class="edition">
+							<!--Menu Indicator-->
+							<div class="edition-indicator">
+								<img src="./assets/header-icons/next .png" alt="">
+							</div>
+							<input type="checkbox" id="check-menu-mobile">
+							<div id="edition-mobile-conteiner">
+								<label for="check-menu-mobile" id="edition-mobile">EDITIONS</label>
+								<!--Edition Menu Options-->
+								<ul class="option">
+									<li><a href="">KDE PLASMA</a></li>
+									<li><a href="">GNOME</a></li>
+									<li><a href="">XFCE </a></li>
+									<li><a href="">Cinnamon</a></li>
+									<li><a href="">MATE</a></li>
+									<li><a href="">I3</a></li>
+									<li><a href="">BSPWM</a></li>
+									<li><a href="">Zen</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#features">FEATURES</a></li>
+						<li><a href="#support">SUPPORT</a></li>
+						<li><a href="#about">ABOUT</a></li>
 					</ul>
-				</li>
-				<li><a href="#features">FEATURES</a></li>
-				<li><a href="#support">SUPPORT</a></li>
-				<li><a href="#about">ABOUT</a></li>
-			</ul>
+
+				</div>
+			</div>
 		</nav>
 	</header>
 
