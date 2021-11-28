@@ -1,0 +1,183 @@
+:root{
+    --img-preview-height:322px;
+    --img-preview-width:557px;
+    --text-distro-weight:400;
+    --text-distro-size:20px;
+    --button-width:249px;
+    --button-height:60px;
+    --about-width:596px;
+    --title-weight:700;
+    --blue:#1793D1;
+    --h1-size:40px;
+    --h2-size:38px;
+    --h2-wight:600;
+}
+
+/* Attributes of editing session H1 (title) */
+.edition-linux-conteiner {
+    max-width: 1440px;
+}
+.edition-h1{
+    text-align: center;
+    padding-top: 87px;
+}
+
+
+/* CLASS GLOBAL */
+.edition-h1 h1{
+    font-weight: var(--title-weight);
+    font-size:var(--h1-size);
+}
+.edition-distro  h2 {
+    font-weight: var(--h2-wight);
+    font-size: var(--h2-size);
+}
+.edition-h1 span {
+    color: var(--blue);
+}
+.arrow-conteiner {
+    max-height: 30px;
+    max-width: 55px;
+    transition: .5s;
+}
+.edition-distro {
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+}
+#title-kde {
+    align-items: center;
+    color: black;
+    display: flex;
+    gap:10px;
+}
+.text-about {
+    font-weight: var(--text-distro-weight);
+    font-size: var(--text-distro-size);
+    padding-top: 40px;
+}
+.edition-image{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+.download-option{
+    overflow-y: hidden;
+    visibility: hidden;
+    transition: .2s;
+    height: 0px;
+}
+.download-option a::before{
+    background-image: url(../assets/edition/download/download-icon.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    display: inline-block;
+    padding-top: 2px;
+    margin-right:5px;
+    height: 20px;
+    width: 20px;
+    content: "";
+}
+.download-button a,.button {
+    text-decoration: none;
+    align-items:center;
+    padding: 18px 70px;
+    color: var(--blue);
+    display:flex;
+}
+.download-option ul {
+    list-style: none;
+}
+.download-button{
+    margin-top: 25px;
+}
+.button{
+    border: 2px solid var(--blue);
+    border-radius: 13px;
+    cursor: pointer;
+}
+.download-button:hover .download-option{
+    visibility: visible;
+    transition: .2s;
+    height: 170px;
+}
+/* GLOBAL ATRIBUTES */
+
+
+
+
+/* KDE ATRIBUTEs */
+.conteiner-kde{
+    margin-top: 25px;
+}
+#check-kde{
+    display: none;
+}
+.kde-about {
+    max-width:var(--about-width);
+}
+.kde-text-pure {
+    display: none;
+}
+#check-kde:checked + .edition-distro .conteiner-text label .arrow-conteiner {
+    transform: rotatey(180deg) rotateX(180deg);
+    /* transform: rotate(180deg); */
+}
+#check-kde:checked + .edition-distro .conteiner-text .kde-text-pure{
+    display: block;
+}
+#check-kde:checked + .edition-distro .conteiner-text .kde-text{
+    display: none;
+}
+
+/* LIST STYLE KDE */
+.text-list-kde {
+    padding-top: 16px;
+}
+.text-list-kde ul{
+    list-style: none;
+}
+.text-list-kde li::before {
+    color: var(--blue);
+    content:"\2022";
+    display: inline;
+}
+
+.text-list-kde ul span{
+    color: var(--blue);
+}
+.kde-list-pure{
+    display: none;
+}
+#check-kde:checked + .edition-distro .conteiner-text .kde-list{
+    display: none;
+}
+#check-kde:checked + .edition-distro .conteiner-text .kde-list-pure{
+    display: block;
+}
+
+/*THIS FUNCTION MUST BE USED IN ALL EDITIONS(PENDING) NEEDS TO BE CHANGED TO GLOBAL*/
+.image-preview-desktop-kde,.image-preview-desktop-kde-pure{
+    max-height: var(--img-preview-height);
+    max-width: var(--img-preview-width);
+}
+.image-preview-desktop-kde-pure{
+    display: none;
+}
+
+#check-kde:checked + .edition-distro .edition-image .image-preview-desktop-kde {
+    display: none;
+}
+#check-kde:checked + .edition-distro .edition-image .image-preview-desktop-kde-pure{
+    display: block;
+}
+
+.download-pure-kde{
+    display: none;
+}
+#check-kde:checked + .edition-distro .edition-image .download-pure-kde{
+    display: block;
+}
+#check-kde:checked + .edition-distro .edition-image .download-custom{
+    display: none;
+}
