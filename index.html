@@ -48,14 +48,18 @@
 							<div class="edition-indicator">
 								<img src="./assets/header-icons/next .png" alt="">
 							</div>
+							
 							<input type="checkbox" id="check-menu-mobile">
 							<div id="edition-mobile-conteiner">
+								<div class="edition-indicator-mobile">
+									<img src="./assets/header-icons/next .png" alt="">
+								</div>
 								<label for="check-menu-mobile" id="edition-mobile">EDITIONS</label>
 								<!--Edition Menu Options-->
 								<ul class="option">
-									<li><a href="">KDE PLASMA</a></li>
-									<li><a href="">GNOME</a></li>
-									<li><a href="">XFCE </a></li>
+									<li><a href="#conteiner-kde">KDE PLASMA</a></li>
+									<li><a href="#conteiner-gnome">GNOME</a></li>
+									<li><a href="#conteiner-xfce">XFCE </a></li>
 									<li><a href="">Cinnamon</a></li>
 									<li><a href="">MATE</a></li>
 									<li><a href="">I3</a></li>
@@ -89,11 +93,11 @@
 		</div>
 
 		<!-- KDE EDITION -->
-		<div class="conteiner-kde">
+		<div id="conteiner-kde">
 			<input type="checkbox" id="check-kde">
 			<div class="edition-distro">
 				<div class="conteiner-text">
-					<label id="title-kde"for="check-kde">
+					<label class="title-distro" for="check-kde">
 						<h2>KDE Plasma</h2>
 						<div class="arrow-conteiner">
 							<img src="./assets/edition/arrow/Arrow.png" alt="Switch-Icon-Rotate">
@@ -101,18 +105,18 @@
 						<h2>Plasma Pure</h2>
 					</label>
 					<div class="text-about">
-						<div class="kde-about">
-							<p class="kde-text">The Plasma Themed Edition (also known as the Flagship) of 
+						<div class="text-distro-about">
+							<p id="kde-text">The Plasma Themed Edition (also known as the Flagship) of 
 								Arch Linux GUI helps you install Vanilla Arch Linux with the KDE Plasma Desktop 
 								Environment. It is pre-configured and ready to use. It comes with all the neccessary 
 								software and settings to help users get started quickly.</p>
-							<p class="kde-text-pure">The Plasma Pure Edition of Arch Linux GUI helps you install 
+							<p id="kde-text-pure">The Plasma Pure Edition of Arch Linux GUI helps you install 
 								Vanilla Arch Linux with the Stock Plasma Desktop Environment. 
-								It contains all the software in the plasma group by default. This is what users get after 
+								It contains all the software in the <a class="links-in-about"href="">plasma group</a>  by default. This is what users get after 
 								installing the Plasma Desktop Environment after a CLI installation.</p>
 						</div>
-						<div class="text-list-kde">
-							<ul class="kde-list">
+						<div class="distro-text-list">
+							<ul id="kde-list">
 								<p>Some of the <span>features</span> include:</p>
 								<li>NVIDIA GPU Support</li>
 								<li>System Wide Dark Theme, including Web Browser</li>
@@ -123,7 +127,7 @@
 								<li>Simple Desktop Display Manager</li>
 								<li>Paru, AUR helper</li>
 							</ul>
-							<ul class="kde-list-pure">
+							<ul id="kde-list-pure">
 								<p>Some <span>essential</span> applications include:</p>
 								<li>Gedit: Text Editor</li>
 								<li>Gnome-Terminal</li>
@@ -133,42 +137,46 @@
 					</div>
 				</div>
 				<div class="edition-image">
-					<div class="image-preview-desktop-kde">
+					<!-- KDE DESKTOP CUSTOM IMAGE -->
+					<div id="image-preview-desktop-kde">
 						<img src="./assets/edition/kde/KDE DESKTOP NO PURE.png" alt="KDE Desktop Preview">
 					</div>
-					<div class="image-preview-desktop-kde-pure">
+					<!-- KDE DESKTOP PURE IMAGE -->
+					<div id="image-preview-desktop-kde-pure">
 						<img src="./assets/edition/kde/KDE DESKTOP PURE.png" alt="KDE Desktop Pure Preview">
 					</div>
-					<div class="download-button download-custom">
-						<label class="button">DOWNLOAD </label>
-						
+					<!-- DOWNLOAD BUTTON KDE DESKTOP CUSTOM -->
+					<input type="checkbox" id="check-download-kde">
+					<div class="download-button" id="download-kde-custom">
+						<label for="check-download-kde" class="button">DOWNLOAD </label>
 						<div class="download-option">
 							<ul>
 								<li>
-									<a href="link1">SourceForge</a>
+									<a href="link1KDE">SourceForge</a>
 								</li>
 								<li>
-									<a href="link1">OSDN</a>
+									<a href="link1KDE">OSDN</a>
 								</li>
 								<li>
-									<a href="link1">Torrent</a>
+									<a href="link1KDE">Torrent</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<!-- DOWNLOAD PURE -->
-					<div class="download-button download-pure-kde">
-						<label class="button">DOWNLOAD PURE </label>
+					<!-- DOWNLOAD BUTTON KDE DESKTOP PURE-->
+					<div class="download-button " id="download-pure-kde">
+						<label class="button" for="check-download-pure-kde">DOWNLOAD PURE </label>
+						<input type="checkbox" id="check-download-pure-kde">
 						<div class="download-option">
 							<ul>
 								<li>
-									<a href="link2">SourceForge</a>
+									<a href="link2KDE">SourceForge</a>
 								</li>
 								<li>
-									<a href="link2">OSDN</a>
+									<a href="link2KDE">OSDN</a>
 								</li>
 								<li>
-									<a href="link2">Torrent</a>
+									<a href="link2KDE">Torrent</a>
 								</li>
 							</ul>
 						</div>
@@ -176,11 +184,182 @@
 				</div>
 			</div>
 		</div>
+		<!-- GNOME EDITION -->
+		<div id="conteiner-gnome">
+			<input type="checkbox" id="check-gnome">
+			<div class="edition-distro">
+				<div class="conteiner-text">
+					<label class="title-distro" for="check-gnome">
+						<h2>GNOME</h2>
+						<div class="arrow-conteiner">
+							<img src="./assets/edition/arrow/Arrow.png" alt="Switch-Icon-Rotate">
+						</div>
+						<h2>GNOME Pure</h2>
+					</label>
+					<div class="text-about">
+						<div class="text-distro-about">
+							<p id="gnome-text">The GNOME Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the GNOME Desktop Environment. It is pre-configured and ready to use. It comes with all the neccessary software and settings to help users get started quickly.</p>
+							<p id="gnome-text-pure">The GNOME Pure Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Stock GNOME Desktop Environment. It contains some of the the software from <a class="links-in-about" href="">GNOME group.</a> To check what packages come pre-installed, click <a class="links-in-about" href="">here.</a> This is what users get after installing the GNOME Desktop Environment After a CLI installation. The packages provided in this edition are fewer than that in the above linked gnome group. However, this edition gives you a completely working gnome-desktop.</p>
+						</div>
+						<div class="distro-text-list">
+							<ul id="gnome-list">
+								<p>Some of the <span>features</span> include:</p>
+								<li>NVIDIA GPU Support</li>
+								<li>Beautiful System Wide Orchis Dark Theme, including Web Browser</li>
+								<li>Media Player</li>
+								<li>Printing Services (CUPS)</li>
+								<li>Bluetooth with gnome-bluetooth</li>
+								<li>Office Suite with MS fonts</li>
+								<li>Customized Gnome Display Manager</li>
+								<li>Gnome-tweak tool</li>
+								<li>Paru, AUR helper</li>
+							</ul>
+							<ul id="gnome-list-pure">
+								<p>Some <span>essential</span> applications include:</p>
+								<li>Gedit: Text Editor</li>
+								<li>Gnome-Terminal</li>
+								<li>Nautilus: File Manager</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="edition-image-revert">
+					<!-- KDE DESKTOP CUSTOM IMAGE -->
+					<div id="image-preview-desktop-gnome">
+						<img src="./assets/edition/gnome/GNOMEDESKTOP NO PURE.png" alt="KDE Desktop Preview">
+					</div>
+					<!-- KDE DESKTOP PURE IMAGE -->
+					<div id="image-preview-desktop-gnome-pure">
+						<img src="./assets/edition/gnome/GNOME DESKTOP PURE.png" alt="KDE Desktop Pure Preview">
+					</div>
+					<!-- DOWNLOAD BUTTON KDE DESKTOP CUSTOM -->
+					<input type="checkbox" id="check-download-gnome">
+					<div class="download-button" id="download-gnome-custom">
+						<label for="check-download-gnome" class="button">DOWNLOAD </label>
+						<div class="download-option">
+							<ul>
+								<li>
+									<a href="link1gnome">SourceForge</a>
+								</li>
+								<li>
+									<a href="link1gnome">OSDN</a>
+								</li>
+								<li>
+									<a href="link1gnome">Torrent</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- DOWNLOAD BUTTON KDE DESKTOP PURE-->
+					<div class="download-button " id="download-pure-gnome">
+						<label class="button" for="check-download-pure-gnome">DOWNLOAD PURE </label>
+						<input type="checkbox" id="check-download-pure-gnome">
+						<div class="download-option">
+							<ul>
+								<li>
+									<a href="link2gnome">SourceForge</a>
+								</li>
+								<li>
+									<a href="link2gnome">OSDN</a>
+								</li>
+								<li>
+									<a href="link2gnome">Torrent</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="conteiner-xfce">
+			<input type="checkbox" id="check-xfce">
+			<div class="edition-distro">
+				<div class="conteiner-text">
+					<label class="title-distro" for="check-xfce">
+						<h2>XFCE</h2>
+						<div class="arrow-conteiner">
+							<img src="./assets/edition/arrow/Arrow.png" alt="Switch-Icon-Rotate">
+						</div>
+						<h2>XFCE Pure</h2>
+					</label>
+					<div class="text-about">
+						<div class="text-distro-about">
+							<p id="xfce-text">The XFCE Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the XFCE Desktop Environment. It is pre-configured and ready to use. It comes with all the neccessary software and settings to help users get started quickly.</p>
+							<p id="xfce-text-pure">The XFCE Pure Edition of Arch Linux GUI helps you install Vanilla Arch Linux with the Stock XFCE Desktop Environment. It contains all the software in the <a class="links-in-about" href="">XFCE group.</a> This is what users get after installing the XFCE Desktop Environment After a CLI installation. Addtionally <a class="addtion-in-about" href="">xfce4-pulseaudio-plugin</a> & <a class="addtion-in-about" href="">pulseaudio-alsa</a> help with audio. Pavucontrol is not installed, so you need to install it manually. LightDM comes with stock lightdm-gtk-greeter.</p>
+						</div>
+						<div class="distro-text-list">
+							<ul id="xfce-list">
+								<p>Some of the <span>features</span> include:</p>
+								<li>NVIDIA GPU Support</li>
+								<li>Whisker Menu</li>
+								<li>System Wide Dark Theme, including Web Browser</li>
+								<li>Media Player</li>
+								<li>Printing Services (CUPS)</li>
+								<li>Bluetooth with Blueman</li>
+								<li>Office Suite with MS fonts</li>
+								<li>Pavucontrol</li>
+								<li>Open Thunar as root</li>
+								<li>Customized LightDM, with gtk-greeter</li>
+								<li>Paru, AUR helper</li>
+							</ul>
+							<ul id="xfce-list-pure">
+								<p>Important <span>installed</span> software include:</p>
+								<li>Mousepad: Text Editor</li>
+								<li>xfce4-terminal</li>
+								<li>Thunar: File Manager</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="edition-image">
+					<!-- KDE DESKTOP CUSTOM IMAGE -->
+					<div id="image-preview-desktop-xfce">
+						<img src="./assets/edition/xfce/KDE DESKTOP CUSTOM.png" alt="KDE Desktop Preview">
+					</div>
+					<!-- KDE DESKTOP PURE IMAGE -->
+					<div id="image-preview-desktop-xfce-pure">
+						<img src="./assets/edition/xfce/KDE DESKTOP PURE.png" alt="KDE Desktop Pure Preview">
+					</div>
+					<!-- DOWNLOAD BUTTON KDE DESKTOP CUSTOM -->
+					<input type="checkbox" id="check-download-xfce">
+					<div class="download-button" id="download-xfce-custom">
+						<label for="check-download-xfce" class="button">DOWNLOAD </label>
+						<div class="download-option">
+							<ul>
+								<li>
+									<a href="link1xfce">SourceForge</a>
+								</li>
+								<li>
+									<a href="link1xfce">OSDN</a>
+								</li>
+								<li>
+									<a href="link1xfce">Torrent</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- DOWNLOAD BUTTON KDE DESKTOP PURE-->
+					<div class="download-button " id="download-pure-xfce">
+						<label class="button" for="check-download-pure-xfce">DOWNLOAD PURE </label>
+						<input type="checkbox" id="check-download-pure-xfce">
+						<div class="download-option">
+							<ul>
+								<li>
+									<a href="link2xfce">SourceForge</a>
+								</li>
+								<li>
+									<a href="link2xfce">OSDN</a>
+								</li>
+								<li>
+									<a href="link2xfce">Torrent</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</section>
-
-
-
-
-
 </body>
 </html>

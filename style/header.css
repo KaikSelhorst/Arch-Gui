@@ -14,6 +14,7 @@ header{
     align-items: center;
     padding: 0px 15px;
     max-width: 1440px;
+    margin: 0 auto;
     height: 120px;
     display: flex;
 }
@@ -53,7 +54,7 @@ nav a:hover {
     display: flex;
 }
 /*Set the Indicator Size next to the "edition" item*/
-.edition-indicator{
+.edition-indicator,.edition-indicator-mobile{
     transition:.5s;
     height: 28px;
     width: 28px;
@@ -88,6 +89,9 @@ nav a:hover {
 } 
 #edition-mobile{
     cursor: pointer;
+}
+.edition-indicator-mobile{
+    display: none;
 }
 /* This Media Query makes the hover animation of 
 the "Edition" menu option only happen above 769px width(screen)*/
@@ -130,7 +134,10 @@ the "Edition" menu option only happen above 769px width(screen)*/
 }
 /*This Media quary will only work on devices with a screen less than 768px wide("tablet")*/
 @media(max-width:768px){
-
+    #edition-mobile-conteiner{
+        align-items: center;
+        display: flex;
+    }
     #conteiner-menu {
         position: absolute;
         overflow-y: hidden;
@@ -145,6 +152,7 @@ the "Edition" menu option only happen above 769px width(screen)*/
     .btn-mobile label {
         display: block;
     }
+
     #btn-mobile-span {
         border-top: 2px solid var(--blue);
         position: relative;
@@ -177,6 +185,18 @@ the "Edition" menu option only happen above 769px width(screen)*/
         width:30px;
         content:"";
     }
+    .edition-indicator-mobile{
+        display: block;
+    }
+    #check-menu:checked + .btn-mobile .edition-indicator {
+        display: none;
+    }
+
+    #check-menu-mobile:checked + #edition-mobile-conteiner .edition-indicator-mobile {
+        transform:rotate(90deg);
+        transition: .5s;
+    }
+
     #check-menu:checked + .btn-mobile #btn-mobile-span {
         border-top-color: transparent;
         top: -10px;
