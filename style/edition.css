@@ -115,7 +115,9 @@
 #check-download-gnome,
 #check-download-pure-gnome,
 #check-download-xfce,
-#check-download-pure-xfce{
+#check-download-pure-xfce,
+#check-download-pure-cinnamon,
+#check-download-cinnamon{
     display: none;
 }
 
@@ -340,5 +342,63 @@
     display: block;
 }
 #check-xfce:checked + .edition-distro .edition-image #download-xfce-custom{
+    display: none;
+}
+
+
+
+
+/*Cinnamon*/
+#conteiner-cinnamon{
+    margin-top: 25px;
+}
+#check-cinnamon{
+    display: none;
+}
+#cinnamon-text-pure {
+    display: none;
+}
+#second-text-pure{
+    display: none;
+}
+#check-cinnamon:checked + .edition-distro .conteiner-text label .arrow-conteiner {
+    transform: rotatey(180deg) rotateX(180deg);
+}
+#check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-text-pure{
+    display: block;
+}
+#check-cinnamon:checked + .edition-distro .conteiner-text #second-text-pure{
+    margin-top: 10px;
+    display: block;
+}
+#check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-text{
+    display: none;
+}
+/* LIST STYLE KDE */
+#check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-list{
+    display: none;
+}
+
+#image-preview-desktop-cinnamon,#image-preview-desktop-cinnamon-pure{
+    max-height: var(--img-preview-height);
+    max-width: var(--img-preview-width);
+}
+#image-preview-desktop-cinnamon-pure{
+    display: none;
+}
+
+#check-cinnamon:checked + .edition-distro .edition-image-revert #image-preview-desktop-cinnamon {
+    display: none;
+}
+#check-cinnamon:checked + .edition-distro .edition-image-revert #image-preview-desktop-cinnamon-pure{
+    display: block;
+}
+#download-pure-cinnamon{
+    display: none;
+}
+#check-cinnamon:checked + .edition-distro .edition-image-revert #download-pure-cinnamon{
+    display: block;
+}
+#check-cinnamon:checked + .edition-distro .edition-image-revert #download-cinnamon-custom{
     display: none;
 }
