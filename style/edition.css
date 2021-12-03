@@ -32,18 +32,20 @@
 .edition-distro  h2 {
     font-weight: var(--h2-wight);
     font-size: var(--h2-size);
+    cursor: pointer;
 }
 .edition-h1 span {
     color: var(--blue);
 }
 .title-distro{
     align-items: center;
-    color: black;
     display: flex;
+    color: black;
     gap:10px;
 }
 .arrow-conteiner {
     max-height: 30px;
+    cursor: pointer;
     max-width: 55px;
     transition: .5s;
 }
@@ -117,10 +119,11 @@
 #check-download-xfce,
 #check-download-pure-xfce,
 #check-download-pure-cinnamon,
-#check-download-cinnamon{
+#check-download-cinnamon,
+#check-download-mate,
+#check-download-pure-mate{
     display: none;
 }
-
 .distro-text-list {
     padding-top: 16px;
 }
@@ -132,7 +135,6 @@
     content:"\2022";
     display: inline;
 }
-
 .distro-text-list ul span{
     color: var(--blue);
 }
@@ -141,6 +143,8 @@
     color: var(--blue);
 }
 /* GLOBAL ATRIBUTES */
+
+
 
 /* KDE ATRIBUTEs */
 #conteiner-kde{
@@ -162,8 +166,10 @@
     display: none;
 }
 
-/* LIST STYLE KDE */
 
+
+
+/* LIST STYLE KDE */
 #kde-list-pure{
     display: none;
 }
@@ -173,7 +179,6 @@
 #check-kde:checked + .edition-distro .conteiner-text #kde-list-pure{
     display: block;
 }
-
 #image-preview-desktop-kde,#image-preview-desktop-kde-pure{
     max-height: var(--img-preview-height);
     max-width: var(--img-preview-width);
@@ -181,7 +186,6 @@
 #image-preview-desktop-kde-pure{
     display: none;
 }
-
 #check-kde:checked + .edition-distro .edition-image #image-preview-desktop-kde {
     display: none;
 }
@@ -198,6 +202,8 @@
 #check-kde:checked + .edition-distro .edition-image #download-kde-custom{
     display: none;
 }
+
+
 
 @media(max-width: 768px){
     #check-download-kde:checked + .download-button .download-option , #check-download-pure-kde:checked + .download-option{
@@ -217,8 +223,10 @@
     }
 }
 
-/*GNOME*/
 
+
+
+/*GNOME*/
 .edition-image-revert{
     order: -1;
 }
@@ -234,54 +242,47 @@
 #conteiner-gnome{
     margin-top: 25px;
 }
-
 #check-gnome{
     display: none;
 }
-
 #gnome-text-pure {
     display: none;
 }
-
 #check-gnome:checked + .edition-distro .conteiner-text label .arrow-conteiner {
     transform: rotatey(180deg) rotateX(180deg);
 }
-
 #check-gnome:checked + .edition-distro .conteiner-text #gnome-text-pure{
     display: block;
 }
-
 #check-gnome:checked + .edition-distro .conteiner-text #gnome-text{
     display: none;
 }
-
 #image-preview-desktop-gnome,#image-preview-desktop-gnome-pure{
     max-height: var(--img-preview-height);
     max-width: var(--img-preview-width);
 }
-
 #image-preview-desktop-gnome-pure{
     display: none;
 }
-
 #check-gnome:checked + .edition-distro .edition-image-revert #image-preview-desktop-gnome {
     display: none;
 }
-
 #check-gnome:checked + .edition-distro .edition-image-revert #image-preview-desktop-gnome-pure{
     display: block;
 }
-
 #download-pure-gnome{
     display: none;
 }
-
 #check-gnome:checked + .edition-distro .edition-image-revert #download-pure-gnome{
     display: block;
 }
 #check-gnome:checked + .edition-distro .edition-image-revert #download-gnome-custom{
     display: none;
 }
+
+
+
+
 
 /*XFCE*/
 #xfce-list-pure{
@@ -296,48 +297,37 @@
 #conteiner-xfce{
     margin-top: 25px;
 }
-
 #check-xfce{
     display: none;
 }
-
 #xfce-text-pure {
     display: none;
 }
-
 #check-xfce:checked + .edition-distro .conteiner-text label .arrow-conteiner {
     transform: rotatey(180deg) rotateX(180deg);
 }
-
 #check-xfce:checked + .edition-distro .conteiner-text #xfce-text-pure{
     display: block;
 }
-
 #check-xfce:checked + .edition-distro .conteiner-text #xfce-text{
     display: none;
 }
-
 #image-preview-desktop-xfce,#image-preview-desktop-xfce-pure{
     max-height: var(--img-preview-height);
     max-width: var(--img-preview-width);
 }
-
 #image-preview-desktop-xfce-pure{
     display: none;
 }
-
 #check-xfce:checked + .edition-distro .edition-image #image-preview-desktop-xfce {
     display: none;
 }
-
 #check-xfce:checked + .edition-distro .edition-image #image-preview-desktop-xfce-pure{
     display: block;
 }
-
 #download-pure-xfce{
     display: none;
 }
-
 #check-xfce:checked + .edition-distro .edition-image #download-pure-xfce{
     display: block;
 }
@@ -374,11 +364,10 @@
 #check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-text{
     display: none;
 }
-/* LIST STYLE KDE */
+/* LIST STYLE Cinnamon */
 #check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-list{
     display: none;
 }
-
 #image-preview-desktop-cinnamon,#image-preview-desktop-cinnamon-pure{
     max-height: var(--img-preview-height);
     max-width: var(--img-preview-width);
@@ -386,7 +375,6 @@
 #image-preview-desktop-cinnamon-pure{
     display: none;
 }
-
 #check-cinnamon:checked + .edition-distro .edition-image-revert #image-preview-desktop-cinnamon {
     display: none;
 }
@@ -400,5 +388,55 @@
     display: block;
 }
 #check-cinnamon:checked + .edition-distro .edition-image-revert #download-cinnamon-custom{
+    display: none;
+}
+/*MATE*/
+#mate-list-pure{
+    display: none;
+}
+#check-mate:checked + .edition-distro .conteiner-text #mate-list{
+    display: none;
+}
+#check-mate:checked + .edition-distro .conteiner-text #mate-list-pure{
+    display: block;
+}
+#conteiner-mate{
+    margin-top: 25px;
+}
+#check-mate{
+    display: none;
+}
+#mate-text-pure {
+    display: none;
+}
+#check-mate:checked + .edition-distro .conteiner-text label .arrow-conteiner {
+    transform: rotatey(180deg) rotateX(180deg);
+}
+#check-mate:checked + .edition-distro .conteiner-text #mate-text-pure{
+    display: block;
+}
+#check-mate:checked + .edition-distro .conteiner-text #mate-text{
+    display: none;
+}
+#image-preview-desktop-mate,#image-preview-desktop-mate-pure{
+    max-height: var(--img-preview-height);
+    max-width: var(--img-preview-width);
+}
+#image-preview-desktop-mate-pure{
+    display: none;
+}
+#check-mate:checked + .edition-distro .edition-image #image-preview-desktop-mate {
+    display: none;
+}
+#check-mate:checked + .edition-distro .edition-image #image-preview-desktop-mate-pure{
+    display: block;
+}
+#download-pure-mate{
+    display: none;
+}
+#check-mate:checked + .edition-distro .edition-image #download-pure-mate{
+    display: block;
+}
+#check-mate:checked + .edition-distro .edition-image #download-mate-custom{
     display: none;
 }
