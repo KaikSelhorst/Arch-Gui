@@ -1,115 +1,123 @@
-:root{
-    --img-preview-height:322px;
-    --img-preview-width:557px;
-    --text-distro-weight:400;
-    --text-distro-size:20px;
-    --button-width:249px;
-    --button-height:60px;
-    --about-width:596px;
-    --title-weight:700;
-    --blue:#1793D1;
-    --h1-size:40px;
-    --h2-size:38px;
-    --h2-wight:600;
+:root {
+  --img-preview-height: 322px;
+  --img-preview-width: 557px;
+  --text-distro-weight: 400;
+  --text-distro-size: 20px;
+  --button-width: 249px;
+  --button-height: 60px;
+  --about-width: 596px;
+  --title-weight: 700;
+  --blue: #1793d1;
+  --h1-size: 40px;
+  --h2-size: 38px;
+  --h2-wight: 600;
 }
 
 /* Attributes of editing session H1 (title) */
 .edition-linux-conteiner {
-    max-width: 1440px;
-    margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-.edition-h1{
-    text-align: center;
-    padding-top: 87px;
+.edition-h1 {
+  text-align: center;
+  padding-top: 87px;
 }
-
 
 /* CLASS GLOBAL */
-.edition-h1 h1{
-    font-weight: var(--title-weight);
-    font-size:var(--h1-size);
+.edition-h1 h1 {
+  font-weight: var(--title-weight);
+  font-size: var(--h1-size);
 }
-.edition-distro  h2 {
-    font-weight: var(--h2-wight);
-    font-size: var(--h2-size);
-    cursor: pointer;
+.edition-distro h2 {
+  font-weight: var(--h2-wight);
+  font-size: var(--h2-size);
+  cursor: pointer;
 }
 .edition-h1 span {
-    color: var(--blue);
+  color: var(--blue);
 }
-.title-distro{
-    align-items: center;
-    display: flex;
-    color: black;
-    gap:10px;
+.title-distro {
+  align-items: center;
+  display: flex;
+  color: black;
+  gap: 10px;
 }
 .arrow-conteiner {
-    max-height: 30px;
-    cursor: pointer;
-    max-width: 55px;
-    transition: .5s;
+  max-height: 30px;
+  cursor: pointer;
+  max-width: 55px;
+  transition: 0.5s;
 }
-.edition-distro{
-    justify-content: center;
-    display: flex;
-    gap: 30px;
+#conteiner-kde,
+#conteiner-gnome,
+#conteiner-xfce,
+#conteiner-cinnamon,
+#conteiner-i3 {
+  margin-top: 25px;
+}
+.edition-distro {
+  justify-content: center;
+  display: flex;
+  gap: 30px;
 }
 .text-about {
-    font-weight: var(--text-distro-weight);
-    font-size: var(--text-distro-size);
-    padding-top: 40px;
+  font-weight: var(--text-distro-weight);
+  font-size: var(--text-distro-size);
+  padding-top: 40px;
 }
-.addtion-in-about{
-    color:#F083B5;
+.addtion-in-about {
+  color: #f083b5 !important;
 }
 .text-distro-about {
-    max-width:var(--about-width);
+  max-width: var(--about-width);
 }
-.edition-image,.edition-image-revert{
-    flex-direction: column;
-    align-items: center;
-    display: flex;
+.edition-image,
+.edition-image-revert {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
 }
-.download-option{
-    overflow-y: hidden;
-    visibility: hidden;
-    transition: .2s;
-    height: 0px;
+.download-option {
+  overflow-y: hidden;
+  visibility: hidden;
+  transition: 0.2s;
+  height: 0px;
 }
-.download-option a::before{
-    background-image: url(../assets/edition/download/download-icon.png);
-    background-repeat: no-repeat;
-    background-size: 20px;
-    display: inline-block;
-    padding-top: 2px;
-    margin-right:5px;
-    height: 20px;
-    width: 20px;
-    content: "";
+.download-option a::before {
+  background-image: url(../assets/edition/download/download-icon.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  display: inline-block;
+  padding-top: 2px;
+  margin-right: 5px;
+  height: 20px;
+  width: 20px;
+  content: "";
 }
-.download-button a,.button {
-    text-decoration: none;
-    align-items:center;
-    padding: 18px 70px;
-    color: var(--blue);
-    display:flex;
+.download-button a,
+.button {
+  text-decoration: none;
+  align-items: center;
+  padding: 18px 70px;
+  color: var(--blue);
+  display: flex;
 }
 .download-option ul {
-    list-style: none;
+  list-style: none;
 }
-.download-button{
-    margin-top: 25px;
+.download-button {
+  margin-top: 25px;
 }
-.button{
-    border: 2px solid var(--blue);
-    border-radius: 13px;
-    cursor: pointer;
+.button {
+  border: 2px solid var(--blue);
+  border-radius: 13px;
+  cursor: pointer;
 }
 
-.download-button:hover .download-option{
-    visibility: visible;
-    transition: .2s;
-    height: 170px;
+.download-button:hover .download-option {
+  visibility: visible;
+  transition: 0.2s;
+  height: 170px;
 }
 #check-download-kde,
 #check-download-pure-kde,
@@ -121,322 +129,366 @@
 #check-download-pure-cinnamon,
 #check-download-cinnamon,
 #check-download-mate,
-#check-download-pure-mate{
-    display: none;
+#check-download-pure-mate {
+  display: none;
 }
 .distro-text-list {
-    padding-top: 16px;
+  padding-top: 16px;
+  width: var(--about-width);
 }
-.distro-text-list ul{
-    list-style: none;
+.distro-text-list ul {
+  list-style: none;
 }
 .distro-text-list li::before {
-    color: var(--blue);
-    content:"\2022";
-    display: inline;
+  color: var(--blue);
+  content: "\2022";
+  display: inline;
 }
-.distro-text-list ul span{
-    color: var(--blue);
+.distro-text-list ul span {
+  color: var(--blue);
 }
-.links-in-about{
-    text-decoration: none;
-    color: var(--blue);
+.links-in-about {
+  text-decoration: none;
+  color: var(--blue);
+}
+.distro-text-list li {
+  margin-left: 5px;
 }
 /* GLOBAL ATRIBUTES */
 
-
-
 /* KDE ATRIBUTEs */
-#conteiner-kde{
-    margin-top: 25px;
-}
-#check-kde{
-    display: none;
+#check-kde {
+  display: none;
 }
 #kde-text-pure {
-    display: none;
+  display: none;
 }
 #check-kde:checked + .edition-distro .conteiner-text label .arrow-conteiner {
-    transform: rotatey(180deg) rotateX(180deg);
+  transform: rotatey(180deg) rotateX(180deg);
 }
-#check-kde:checked + .edition-distro .conteiner-text #kde-text-pure{
-    display: block;
+#check-kde:checked + .edition-distro .conteiner-text #kde-text-pure {
+  display: block;
 }
-#check-kde:checked + .edition-distro .conteiner-text #kde-text{
-    display: none;
+#check-kde:checked + .edition-distro .conteiner-text #kde-text {
+  display: none;
 }
-
-
-
 
 /* LIST STYLE KDE */
-#kde-list-pure{
-    display: none;
+#kde-list-pure {
+  display: none;
 }
-#check-kde:checked + .edition-distro .conteiner-text #kde-list{
-    display: none;
+#check-kde:checked + .edition-distro .conteiner-text #kde-list {
+  display: none;
 }
-#check-kde:checked + .edition-distro .conteiner-text #kde-list-pure{
-    display: block;
+#check-kde:checked + .edition-distro .conteiner-text #kde-list-pure {
+  display: block;
 }
-#image-preview-desktop-kde,#image-preview-desktop-kde-pure{
-    max-height: var(--img-preview-height);
-    max-width: var(--img-preview-width);
+#image-preview-desktop-kde,
+#image-preview-desktop-kde-pure {
+  max-height: var(--img-preview-height);
+  max-width: var(--img-preview-width);
 }
-#image-preview-desktop-kde-pure{
-    display: none;
+#image-preview-desktop-kde-pure {
+  display: none;
 }
 #check-kde:checked + .edition-distro .edition-image #image-preview-desktop-kde {
-    display: none;
+  display: none;
 }
-#check-kde:checked + .edition-distro .edition-image #image-preview-desktop-kde-pure{
-    display: block;
-}
-
-#download-pure-kde{
-    display: none;
-}
-#check-kde:checked + .edition-distro .edition-image #download-pure-kde{
-    display: block;
-}
-#check-kde:checked + .edition-distro .edition-image #download-kde-custom{
-    display: none;
+#check-kde:checked
+  + .edition-distro
+  .edition-image
+  #image-preview-desktop-kde-pure {
+  display: block;
 }
 
-
-
-@media(max-width: 768px){
-    #check-download-kde:checked + .download-button .download-option , #check-download-pure-kde:checked + .download-option{
-        visibility: visible;
-        transition: .2s;
-        height: 170px;
-    }
-    #check-download-gnome:checked + .download-button .download-option , #check-download-pure-gnome:checked + .download-option{
-        visibility: visible;
-        transition: .2s;
-        height: 170px;
-    }
-    #check-download-xfce:checked + .download-button .download-option , #check-download-pure-xfce:checked + .download-option{
-        visibility: visible;
-        transition: .2s;
-        height: 170px;
-    }
+#download-pure-kde {
+  display: none;
+}
+#check-kde:checked + .edition-distro .edition-image #download-pure-kde {
+  display: block;
+}
+#check-kde:checked + .edition-distro .edition-image #download-kde-custom {
+  display: none;
 }
 
-
-
+@media (max-width: 768px) {
+  #check-download-kde:checked + .download-button .download-option,
+  #check-download-pure-kde:checked + .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 170px;
+  }
+  #check-download-gnome:checked + .download-button .download-option,
+  #check-download-pure-gnome:checked + .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 170px;
+  }
+  #check-download-xfce:checked + .download-button .download-option,
+  #check-download-pure-xfce:checked + .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 170px;
+  }
+}
 
 /*GNOME*/
-.edition-image-revert{
-    order: -1;
+.edition-image-revert {
+  order: -1;
 }
-#gnome-list-pure{
-    display: none;
+#gnome-list-pure {
+  display: none;
 }
-#check-gnome:checked + .edition-distro .conteiner-text #gnome-list{
-    display: none;
+#check-gnome:checked + .edition-distro .conteiner-text #gnome-list {
+  display: none;
 }
-#check-gnome:checked + .edition-distro .conteiner-text #gnome-list-pure{
-    display: block;
+#check-gnome:checked + .edition-distro .conteiner-text #gnome-list-pure {
+  display: block;
 }
-#conteiner-gnome{
-    margin-top: 25px;
-}
-#check-gnome{
-    display: none;
+
+#check-gnome {
+  display: none;
 }
 #gnome-text-pure {
-    display: none;
+  display: none;
 }
 #check-gnome:checked + .edition-distro .conteiner-text label .arrow-conteiner {
-    transform: rotatey(180deg) rotateX(180deg);
+  transform: rotatey(180deg) rotateX(180deg);
 }
-#check-gnome:checked + .edition-distro .conteiner-text #gnome-text-pure{
-    display: block;
+#check-gnome:checked + .edition-distro .conteiner-text #gnome-text-pure {
+  display: block;
 }
-#check-gnome:checked + .edition-distro .conteiner-text #gnome-text{
-    display: none;
+#check-gnome:checked + .edition-distro .conteiner-text #gnome-text {
+  display: none;
 }
-#image-preview-desktop-gnome,#image-preview-desktop-gnome-pure{
-    max-height: var(--img-preview-height);
-    max-width: var(--img-preview-width);
+#image-preview-desktop-gnome,
+#image-preview-desktop-gnome-pure {
+  max-height: var(--img-preview-height);
+  max-width: var(--img-preview-width);
 }
-#image-preview-desktop-gnome-pure{
-    display: none;
+#image-preview-desktop-gnome-pure {
+  display: none;
 }
-#check-gnome:checked + .edition-distro .edition-image-revert #image-preview-desktop-gnome {
-    display: none;
+#check-gnome:checked
+  + .edition-distro
+  .edition-image-revert
+  #image-preview-desktop-gnome {
+  display: none;
 }
-#check-gnome:checked + .edition-distro .edition-image-revert #image-preview-desktop-gnome-pure{
-    display: block;
+#check-gnome:checked
+  + .edition-distro
+  .edition-image-revert
+  #image-preview-desktop-gnome-pure {
+  display: block;
 }
-#download-pure-gnome{
-    display: none;
+#download-pure-gnome {
+  display: none;
 }
-#check-gnome:checked + .edition-distro .edition-image-revert #download-pure-gnome{
-    display: block;
+#check-gnome:checked
+  + .edition-distro
+  .edition-image-revert
+  #download-pure-gnome {
+  display: block;
 }
-#check-gnome:checked + .edition-distro .edition-image-revert #download-gnome-custom{
-    display: none;
+#check-gnome:checked
+  + .edition-distro
+  .edition-image-revert
+  #download-gnome-custom {
+  display: none;
 }
-
-
-
-
 
 /*XFCE*/
-#xfce-list-pure{
-    display: none;
+#xfce-list-pure {
+  display: none;
 }
-#check-xfce:checked + .edition-distro .conteiner-text #xfce-list{
-    display: none;
+#check-xfce:checked + .edition-distro .conteiner-text #xfce-list {
+  display: none;
 }
-#check-xfce:checked + .edition-distro .conteiner-text #xfce-list-pure{
-    display: block;
+#check-xfce:checked + .edition-distro .conteiner-text #xfce-list-pure {
+  display: block;
 }
-#conteiner-xfce{
-    margin-top: 25px;
-}
-#check-xfce{
-    display: none;
+#check-xfce {
+  display: none;
 }
 #xfce-text-pure {
-    display: none;
+  display: none;
 }
 #check-xfce:checked + .edition-distro .conteiner-text label .arrow-conteiner {
-    transform: rotatey(180deg) rotateX(180deg);
+  transform: rotatey(180deg) rotateX(180deg);
 }
-#check-xfce:checked + .edition-distro .conteiner-text #xfce-text-pure{
-    display: block;
+#check-xfce:checked + .edition-distro .conteiner-text #xfce-text-pure {
+  display: block;
 }
-#check-xfce:checked + .edition-distro .conteiner-text #xfce-text{
-    display: none;
+#check-xfce:checked + .edition-distro .conteiner-text #xfce-text {
+  display: none;
 }
-#image-preview-desktop-xfce,#image-preview-desktop-xfce-pure{
-    max-height: var(--img-preview-height);
-    max-width: var(--img-preview-width);
+#image-preview-desktop-xfce,
+#image-preview-desktop-xfce-pure {
+  max-height: var(--img-preview-height);
+  max-width: var(--img-preview-width);
 }
-#image-preview-desktop-xfce-pure{
-    display: none;
+#image-preview-desktop-xfce-pure {
+  display: none;
 }
-#check-xfce:checked + .edition-distro .edition-image #image-preview-desktop-xfce {
-    display: none;
+#check-xfce:checked
+  + .edition-distro
+  .edition-image
+  #image-preview-desktop-xfce {
+  display: none;
 }
-#check-xfce:checked + .edition-distro .edition-image #image-preview-desktop-xfce-pure{
-    display: block;
+#check-xfce:checked
+  + .edition-distro
+  .edition-image
+  #image-preview-desktop-xfce-pure {
+  display: block;
 }
-#download-pure-xfce{
-    display: none;
+#download-pure-xfce {
+  display: none;
 }
-#check-xfce:checked + .edition-distro .edition-image #download-pure-xfce{
-    display: block;
+#check-xfce:checked + .edition-distro .edition-image #download-pure-xfce {
+  display: block;
 }
-#check-xfce:checked + .edition-distro .edition-image #download-xfce-custom{
-    display: none;
+#check-xfce:checked + .edition-distro .edition-image #download-xfce-custom {
+  display: none;
 }
-
-
-
 
 /*Cinnamon*/
-#conteiner-cinnamon{
-    margin-top: 25px;
-}
-#check-cinnamon{
-    display: none;
+#check-cinnamon {
+  display: none;
 }
 #cinnamon-text-pure {
-    display: none;
+  display: none;
 }
-#second-text-pure{
-    display: none;
+#second-text-pure {
+  display: none;
 }
-#check-cinnamon:checked + .edition-distro .conteiner-text label .arrow-conteiner {
-    transform: rotatey(180deg) rotateX(180deg);
+#check-cinnamon:checked
+  + .edition-distro
+  .conteiner-text
+  label
+  .arrow-conteiner {
+  transform: rotatey(180deg) rotateX(180deg);
 }
-#check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-text-pure{
-    display: block;
+#check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-text-pure {
+  display: block;
 }
-#check-cinnamon:checked + .edition-distro .conteiner-text #second-text-pure{
-    margin-top: 10px;
-    display: block;
+#check-cinnamon:checked + .edition-distro .conteiner-text #second-text-pure {
+  margin-top: 10px;
+  display: block;
 }
-#check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-text{
-    display: none;
+#check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-text {
+  display: none;
 }
 /* LIST STYLE Cinnamon */
-#check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-list{
-    display: none;
+#check-cinnamon:checked + .edition-distro .conteiner-text #cinnamon-list {
+  display: none;
 }
-#image-preview-desktop-cinnamon,#image-preview-desktop-cinnamon-pure{
-    max-height: var(--img-preview-height);
-    max-width: var(--img-preview-width);
+#image-preview-desktop-cinnamon,
+#image-preview-desktop-cinnamon-pure {
+  max-height: var(--img-preview-height);
+  max-width: var(--img-preview-width);
 }
-#image-preview-desktop-cinnamon-pure{
-    display: none;
+#image-preview-desktop-cinnamon-pure {
+  display: none;
 }
-#check-cinnamon:checked + .edition-distro .edition-image-revert #image-preview-desktop-cinnamon {
-    display: none;
+#check-cinnamon:checked
+  + .edition-distro
+  .edition-image-revert
+  #image-preview-desktop-cinnamon {
+  display: none;
 }
-#check-cinnamon:checked + .edition-distro .edition-image-revert #image-preview-desktop-cinnamon-pure{
-    display: block;
+#check-cinnamon:checked
+  + .edition-distro
+  .edition-image-revert
+  #image-preview-desktop-cinnamon-pure {
+  display: block;
 }
-#download-pure-cinnamon{
-    display: none;
+#download-pure-cinnamon {
+  display: none;
 }
-#check-cinnamon:checked + .edition-distro .edition-image-revert #download-pure-cinnamon{
-    display: block;
+#check-cinnamon:checked
+  + .edition-distro
+  .edition-image-revert
+  #download-pure-cinnamon {
+  display: block;
 }
-#check-cinnamon:checked + .edition-distro .edition-image-revert #download-cinnamon-custom{
-    display: none;
+#check-cinnamon:checked
+  + .edition-distro
+  .edition-image-revert
+  #download-cinnamon-custom {
+  display: none;
 }
 /*MATE*/
-#mate-list-pure{
-    display: none;
+#mate-list-pure {
+  display: none;
 }
-#check-mate:checked + .edition-distro .conteiner-text #mate-list{
-    display: none;
+#check-mate:checked + .edition-distro .conteiner-text #mate-list {
+  display: none;
 }
-#check-mate:checked + .edition-distro .conteiner-text #mate-list-pure{
-    display: block;
+#check-mate:checked + .edition-distro .conteiner-text #mate-list-pure {
+  display: block;
 }
-#conteiner-mate{
-    margin-top: 25px;
+#conteiner-mate {
+  margin-top: 25px;
 }
-#check-mate{
-    display: none;
+#check-mate {
+  display: none;
 }
 #mate-text-pure {
-    display: none;
+  display: none;
 }
 #check-mate:checked + .edition-distro .conteiner-text label .arrow-conteiner {
-    transform: rotatey(180deg) rotateX(180deg);
+  transform: rotatey(180deg) rotateX(180deg);
 }
-#check-mate:checked + .edition-distro .conteiner-text #mate-text-pure{
-    display: block;
+#check-mate:checked + .edition-distro .conteiner-text #mate-text-pure {
+  display: block;
 }
-#check-mate:checked + .edition-distro .conteiner-text #mate-text{
-    display: none;
+#check-mate:checked + .edition-distro .conteiner-text #mate-text {
+  display: none;
 }
-#image-preview-desktop-mate,#image-preview-desktop-mate-pure{
-    max-height: var(--img-preview-height);
-    max-width: var(--img-preview-width);
+#image-preview-desktop-mate,
+#image-preview-desktop-mate-pure {
+  max-height: var(--img-preview-height);
+  max-width: var(--img-preview-width);
 }
-#image-preview-desktop-mate-pure{
-    display: none;
+#image-preview-desktop-mate-pure {
+  display: none;
 }
-#check-mate:checked + .edition-distro .edition-image #image-preview-desktop-mate {
-    display: none;
+#check-mate:checked
+  + .edition-distro
+  .edition-image
+  #image-preview-desktop-mate {
+  display: none;
 }
-#check-mate:checked + .edition-distro .edition-image #image-preview-desktop-mate-pure{
-    display: block;
+#check-mate:checked
+  + .edition-distro
+  .edition-image
+  #image-preview-desktop-mate-pure {
+  display: block;
 }
-#download-pure-mate{
-    display: none;
+#download-pure-mate {
+  display: none;
 }
-#check-mate:checked + .edition-distro .edition-image #download-pure-mate{
-    display: block;
+#check-mate:checked + .edition-distro .edition-image #download-pure-mate {
+  display: block;
 }
-#check-mate:checked + .edition-distro .edition-image #download-mate-custom{
-    display: none;
+#check-mate:checked + .edition-distro .edition-image #download-mate-custom {
+  display: none;
+}
+
+/* I3 */
+
+/* lul */
+
+/* ZEN EDITIOn */
+
+#zen-require {
+  margin: 10px 0px 0px 0px;
+}
+
+#zen-require p:nth-child(1) {
+  margin: 0px 0px 5px 0px;
+}
+#zen-require p:nth-child(2) {
+  border-left: 2px solid var(--blue);
 }
