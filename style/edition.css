@@ -31,6 +31,7 @@
 .edition-distro h2 {
   font-weight: var(--h2-wight);
   font-size: var(--h2-size);
+  text-transform: uppercase;
   cursor: pointer;
 }
 .edition-h1 span {
@@ -129,7 +130,8 @@
 #check-download-pure-cinnamon,
 #check-download-cinnamon,
 #check-download-mate,
-#check-download-pure-mate {
+#check-download-pure-mate,
+#check-download-bspwm {
   display: none;
 }
 .distro-text-list {
@@ -475,13 +477,13 @@
 #check-mate:checked + .edition-distro .edition-image #download-mate-custom {
   display: none;
 }
-
 /* I3 */
+/* NO EDITON */
 
-/* lul */
+/* BSPWM */
+/* NO EDITON */
 
 /* ZEN EDITIOn */
-
 #zen-require {
   margin: 10px 0px 0px 0px;
 }

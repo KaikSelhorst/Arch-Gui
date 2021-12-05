@@ -1,12 +1,12 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Nunito', sans-serif;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-img{
-    display: block;
-    width: 100%;
+img {
+  display: block;
+  width: 100%;
 }
