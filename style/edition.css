@@ -49,15 +49,9 @@
   max-width: 55px;
   transition: 0.5s;
 }
-#conteiner-kde,
-#conteiner-gnome,
-#conteiner-xfce,
-#conteiner-cinnamon,
-#conteiner-i3 {
-  margin-top: 25px;
-}
 .edition-distro {
   justify-content: center;
+  margin-top: 25px;
   display: flex;
   gap: 30px;
 }
@@ -131,7 +125,9 @@
 #check-download-cinnamon,
 #check-download-mate,
 #check-download-pure-mate,
-#check-download-bspwm {
+#check-download-bspwm,
+#check-download-i3,
+#check-download-zen {
   display: none;
 }
 .distro-text-list {
@@ -212,28 +208,6 @@
 #check-kde:checked + .edition-distro .edition-image #download-kde-custom {
   display: none;
 }
-
-@media (max-width: 768px) {
-  #check-download-kde:checked + .download-button .download-option,
-  #check-download-pure-kde:checked + .download-option {
-    visibility: visible;
-    transition: 0.2s;
-    height: 170px;
-  }
-  #check-download-gnome:checked + .download-button .download-option,
-  #check-download-pure-gnome:checked + .download-option {
-    visibility: visible;
-    transition: 0.2s;
-    height: 170px;
-  }
-  #check-download-xfce:checked + .download-button .download-option,
-  #check-download-pure-xfce:checked + .download-option {
-    visibility: visible;
-    transition: 0.2s;
-    height: 170px;
-  }
-}
-
 /*GNOME*/
 .edition-image-revert {
   order: -1;
@@ -493,4 +467,75 @@
 }
 #zen-require p:nth-child(2) {
   border-left: 2px solid var(--blue);
+}
+
+@media (max-width: 768px) {
+  .edition-image-revert,
+  .edition-image {
+    order: 2;
+  }
+  .edition-distro {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .title-distro {
+    justify-content: center;
+  }
+  .text-about {
+    padding-top: 20px;
+  }
+  .download-button a,
+  .button {
+    padding: 25px 100px;
+  }
+  .button,
+  .download-option {
+    font-size: 25px;
+  }
+  #check-download-kde:checked + .download-button .download-option,
+  #check-download-pure-kde:checked + .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 220px;
+  }
+  #check-download-gnome:checked + .download-button .download-option,
+  #check-download-pure-gnome:checked + .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 220px;
+  }
+  #check-download-xfce:checked + .download-button .download-option,
+  #check-download-pure-xfce:checked + .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 220px;
+  }
+  #check-download-cinnamon:checked + .download-button .download-option,
+  #check-download-pure-cinnamon:checked + .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 220px;
+  }
+  #check-download-mate:checked + .download-button .download-option,
+  #download-pure-mate:checked + .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 220px;
+  }
+  #check-download-i3:checked + .download-button .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 220px;
+  }
+  #check-download-bspwm:checked + .download-button .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 220px;
+  }
+  #check-download-zen:checked + .download-button .download-option {
+    visibility: visible;
+    transition: 0.2s;
+    height: 220px;
+  }
 }

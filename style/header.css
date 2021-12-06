@@ -107,7 +107,7 @@ the "Edition" menu option only happen above 769px width(screen)*/
         position: absolute;
         transition: 0.5s;
         display: block;
-        height: 400px;
+        height: 450px;
         top: 70px;
     }
     
