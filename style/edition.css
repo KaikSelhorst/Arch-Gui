@@ -132,7 +132,7 @@
 }
 .distro-text-list {
   padding-top: 16px;
-  width: var(--about-width);
+  max-width: var(--about-width);
 }
 .distro-text-list ul {
   list-style: none;
@@ -470,6 +470,9 @@
 }
 
 @media (max-width: 768px) {
+  .title-distro{
+    flex-wrap: wrap;
+  }
   .edition-image-revert,
   .edition-image {
     order: 2;
@@ -539,3 +542,4 @@
     height: 220px;
   }
 }
+
