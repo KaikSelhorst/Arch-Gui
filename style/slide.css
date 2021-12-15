@@ -1,0 +1,191 @@
+:root {
+  --tittle-size: 40px;
+  --tittle-weigth: 700;
+  --blue: #1793d1;
+}
+.slider-frame {
+  width: 1000px;
+  height: 450px;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+/* SLIDER ANIMATION */
+@media (min-width: 768px) {
+  @-webkit-keyframes slide_animation {
+    0% {
+      left: 1500px;
+    }
+    10% {
+      left: 1500px;
+    }
+    20% {
+      left: 2000px;
+    }
+    30% {
+      left: 2500px;
+    }
+    40% {
+      left: 3000px;
+    }
+    50% {
+      left: 3500px;
+    }
+    60% {
+      left: 4000px;
+    }
+    70% {
+      left: 4500px;
+    }
+    80% {
+      left: 5000px;
+    }
+    90% {
+      left: 1500px;
+    }
+    100% {
+      left: 1500px;
+    }
+  }
+}
+.slide-images {
+  height: 450px;
+  width: 5000px;
+  position: relative;
+  margin: 0 0 0 -5000px;
+  -webkit-animation-duration: 60s;
+  -webkit-animation-play-state: running;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-name: slide_animation;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.img-conteiner {
+  width: 500px;
+  height: auto;
+  float: left;
+  position: relative;
+  padding: 0px 5px;
+}
+.img-conteiner p {
+  font-size: 20px;
+}
+.slide-text {
+  text-align: center;
+}
+.slide-h1 {
+  margin: 25px 0px;
+  text-align: center;
+}
+.slide-h1 h1 {
+  font-size: var(--tittle-size);
+  font-weight: var(--tittle-weigth);
+}
+
+.slide-h1 span {
+  color: var(--blue);
+}
+/* 768px */
+@media (max-width: 768px) {
+  .slider-frame {
+    width: 500px;
+  }
+}
+
+/* 428px */
+@media (max-width: 428px) {
+  .slider-frame {
+    width: 400px;
+  }
+  .img-conteiner {
+    width: 400px;
+  }
+  .slide-images {
+    width: 3200px;
+    margin: 0 0 0 -3200px;
+  }
+  @-webkit-keyframes slide_animation {
+    0% {
+      left: 400px;
+    }
+    10% {
+      left: 800px;
+    }
+    20% {
+      left: 1200px;
+    }
+    30% {
+      left: 1600px;
+    }
+    40% {
+      left: 2000px;
+    }
+    50% {
+      left: 2400px;
+    }
+    60% {
+      left: 2800px;
+    }
+    70% {
+      left: 3200px;
+    }
+    80% {
+      left: 400px;
+    }
+    90% {
+      left: 400px;
+    }
+    100% {
+      left: 400px;
+    }
+  }
+}
+
+/* 350px */
+@media (max-width: 375px) {
+  .slider-frame {
+    width: 350px;
+  }
+  .img-conteiner {
+    width: 350px;
+  }
+  .slide-images {
+    width: 2800px;
+    margin: 0 0 0 -2800px;
+  }
+  @-webkit-keyframes slide_animation {
+    0% {
+      left: 350px;
+    }
+    10% {
+      left: 700px;
+    }
+    20% {
+      left: 1050px;
+    }
+    30% {
+      left: 1400px;
+    }
+    40% {
+      left: 1750px;
+    }
+    50% {
+      left: 2100px;
+    }
+    60% {
+      left: 2450px;
+    }
+    70% {
+      left: 2800px;
+    }
+    80% {
+      left: 350px;
+    }
+    90% {
+      left: 350px;
+    }
+    100% {
+      left: 350px;
+    }
+  }
+}
