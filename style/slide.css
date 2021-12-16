@@ -93,7 +93,7 @@
 }
 
 /* 428px */
-@media (max-width: 428px) {
+@media (max-width: 500px) {
   .slider-frame {
     width: 400px;
   }
@@ -142,12 +142,14 @@
 }
 
 /* 350px */
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .slider-frame {
     width: 350px;
+    height: 350px;
   }
   .img-conteiner {
     width: 350px;
+    height: 350px;
   }
   .slide-images {
     width: 2800px;

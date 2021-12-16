@@ -1,0 +1,20 @@
+:root {
+  --background-color: #1d1c1c;
+  --sub-title-font: 15px;
+  --blue: #1793d1;
+}
+
+footer {
+  background: var(--background-color);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 100px;
+}
+.footer-text {
+  text-align: center;
+}
+.footer-text span {
+  color: var(--blue);
+}

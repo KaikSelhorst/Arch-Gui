@@ -1,0 +1,34 @@
+:root {
+  --background-color: #1d1c1c;
+  --font-weight-title: 700;
+  --font-size-title: 40px;
+  --blue: #1793d1;
+}
+#support {
+  background: var(--background-color);
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  display: flex;
+  height: 250px;
+  gap: 56px;
+}
+.support-title h1 {
+  font-weight: var(--font-weight-title);
+  font-size: var(--font-size-title);
+}
+.support-title span {
+  color: var(--blue);
+}
+.support-social {
+  display: flex;
+  gap: 5vw;
+}
+.support-img {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  max-width: 72px;
+}
+.support-img:hover {
+  border: 2px solid rgba(0, 170, 255, 0.212);
+}
