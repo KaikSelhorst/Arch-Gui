@@ -89,6 +89,9 @@
   width: 20px;
   content: "";
 }
+.download-option a:hover {
+  color: #1d1c1c;
+}
 .download-button a,
 .button {
   text-decoration: none;
@@ -470,7 +473,7 @@
 }
 
 @media (max-width: 768px) {
-  .title-distro{
+  .title-distro {
     flex-wrap: wrap;
   }
   .edition-image-revert,
@@ -542,4 +545,3 @@
     height: 220px;
   }
 }
-
