@@ -115,7 +115,7 @@
 .download-button:hover .download-option {
   visibility: visible;
   transition: 0.2s;
-  height: 170px;
+  height: 100px;
 }
 #check-download-kde,
 #check-download-pure-kde,

@@ -10,3 +10,15 @@ img {
   display: block;
   width: 100%;
 }
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--background-color); /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--blue); /* color of the scroll thumb */
+  border-radius: 15px; /* roundness of the scroll thumb */
+}
