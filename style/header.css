@@ -1,263 +1,263 @@
 /* Pressets*/
-:root{
-    --menu_text_size:18px;
-    --text_weight:600;
-    --text_color:white;
-    --blue:#1793D1;
-    --background:#1d1c1c;
+:root {
+  --menu_text_size: 18px;
+  --text_weight: 600;
+  --text_color: white;
+  --blue: #1793d1;
+  --background: #1d1c1c;
 }
 
 /* Header (conteiner Menu) Style*/
-header{
-    justify-content: space-between;
-    background:var(--background);
-    align-items: center;
-    padding: 0px 15px;
-    max-width: 1440px;
-    margin: 0 auto;
-    height: 120px;
-    display: flex;
+header {
+  justify-content: space-between;
+  background: var(--background);
+  align-items: center;
+  padding: 0px 15px;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 120px;
+  display: flex;
 }
 /*setting logo size according to its container*/
-.logo{
-    max-width: 185px;
-    max-height: 55px;
+.logo {
+  max-width: 185px;
+  max-height: 55px;
 }
-.logo-mobile{
-    display: none;
+.logo-mobile {
+  display: none;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
+nav ul {
+  list-style: none;
+  display: flex;
 }
 nav ul li {
-    padding: 15px;
+  padding: 15px;
 }
 /* Navigation Style and Edition Style*/
-nav a,.edition{
-    border-bottom: 2px solid transparent;
-    font-size: var(--menu_text_size);
-    font-weight: var(--text_weight);
-    color: var(--text_color);
-    text-decoration: none;
-    transition: ease .5s;
+nav a,
+.edition {
+  border-bottom: 2px solid transparent;
+  font-size: var(--menu_text_size);
+  font-weight: var(--text_weight);
+  color: var(--text_color);
+  text-decoration: none;
+  transition: ease 0.5s;
 }
 /*added a border to each menu link*/
 nav a:hover {
-    border-bottom:2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
 }
 /* These Attributes cause the "edition" items to be next to their brother or center-aligned*/
-.edition{
-    align-items: center;
-    cursor: pointer;
-    display: flex;
+.edition {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
 }
 /*Set the Indicator Size next to the "edition" item*/
-.edition-indicator,.edition-indicator-mobile{
-    transition:.5s;
-    height: 28px;
-    width: 28px;
+.edition-indicator,
+.edition-indicator-mobile {
+  transition: 0.5s;
+  height: 28px;
+  width: 28px;
 }
-#check-menu{
-    display: none;
+#check-menu {
+  display: none;
 }
 /*option Style*/
 .option {
-    background: var(--background);
-    border-bottom: none;
-    position: absolute;
-    overflow-y: hidden;
-    visibility: hidden;
-    display: block;
-    height: 0px;
+  background: var(--background);
+  border-bottom: none;
+  position: absolute;
+  overflow-y: hidden;
+  visibility: hidden;
+  display: block;
+  height: 0px;
+  padding-right: 25px;
 }
 /*Style Option */
 .option a {
-    text-transform:uppercase;
-    border-left: 2px solid transparent;
-    border-bottom: none;
-    transition: 0.2s;
+  text-transform: uppercase;
+  border-left: 2px solid transparent;
+  border-bottom: none;
+  transition: 0.2s;
 }
 /* These attributes make the Menu edition have a Right Edge when hovering over */
 .option a:hover {
-    border-left: 2px solid var(--blue);
-    border-bottom: none;
+  border-left: 2px solid var(--blue);
+  border-bottom: none;
 }
-#check-menu-mobile{
-    display: none;
-} 
-#edition-mobile{
-    cursor: pointer;
+#check-menu-mobile {
+  display: none;
 }
-.edition-indicator-mobile{
-    display: none;
+#edition-mobile {
+  cursor: pointer;
+}
+.edition-indicator-mobile {
+  display: none;
 }
 /* This Media Query makes the hover animation of 
 the "Edition" menu option only happen above 769px width(screen)*/
-@media(min-width:769px){
-    /* When the mouse hovers over the "edition" the "edition-indicator" will rotate 180 degrees*/
-    .edition:hover .edition-indicator {
-        transform:rotate(180deg);
-    }
+@media (min-width: 769px) {
+  /* When the mouse hovers over the "edition" the "edition-indicator" will rotate 180 degrees*/
+  .edition:hover .edition-indicator {
+    transform: rotate(180deg);
+  }
 
-    /*These styles make that when the mouse hovers over the edition, the menu appears */
-    .edition:hover .option {
-        visibility: visible;
-        position: absolute;
-        transition: 0.5s;
-        display: block;
-        height: 450px;
-        top: 70px;
-    }
-    
+  /*These styles make that when the mouse hovers over the edition, the menu appears */
+  .edition:hover .option {
+    visibility: visible;
+    position: absolute;
+    transition: 0.5s;
+    display: block;
+    height: 450px;
+    top: 70px;
+  }
 }
 /* This media quary will only work on devices with a screen less than 1024px wide (" Small desktop devices") */
-@media(max-width:1024px){
-    /* Header Padding Modifications*/
-    header{
-        padding: 15px 20px;
-    }
-    /* Logo Size Modifications*/
-    .logo{
-        max-width: 158px;
-        max-height: 47px;
-    }
-    /* Adding a margin between menu links */
-    nav a {
-        margin: 0px 10px;
-    }
-    /* Added a greater distance from the top of the site so that the "Editions" menu is NOT covered */
-    .edition:hover .option  {
-        top: 85px;
-    }
+@media (max-width: 1024px) {
+  /* Header Padding Modifications*/
+  header {
+    padding: 15px 20px;
+  }
+  /* Logo Size Modifications*/
+  .logo {
+    max-width: 158px;
+    max-height: 47px;
+  }
+  /* Adding a margin between menu links */
+  nav a {
+    margin: 0px 10px;
+  }
+  /* Added a greater distance from the top of the site so that the "Editions" menu is NOT covered */
+  .edition:hover .option {
+    top: 85px;
+  }
 }
 /*This Media quary will only work on devices with a screen less than 768px wide("tablet")*/
-@media(max-width:768px){
-    #edition-mobile-conteiner{
-        align-items: center;
-        display: flex;
-    }
-    #conteiner-menu {
-        position: absolute;
-        overflow-y: hidden;
-        transition: .2s;
-        display: block;
-        right: -150px;
-        height: 0px;
-        width: 0px;
-        top: 120px;
-    }
-    /* Btn-mobile Style */
-    .btn-mobile label {
-        display: block;
-    }
+@media (max-width: 768px) {
+  #edition-mobile-conteiner {
+    align-items: center;
+    display: flex;
+  }
+  #conteiner-menu {
+    position: absolute;
+    overflow-y: hidden;
+    transition: 0.2s;
+    display: block;
+    right: -150px;
+    height: 0px;
+    width: 0px;
+    top: 120px;
+  }
+  /* Btn-mobile Style */
+  .btn-mobile label {
+    display: block;
+  }
 
-    #btn-mobile-span {
-        border-top: 2px solid var(--blue);
-        position: relative;
-        transition: .2s;
-        display: block;
-        content: "";
-        width: 30px;
-        height: 2px;
-    }
+  #btn-mobile-span {
+    border-top: 2px solid var(--blue);
+    position: relative;
+    transition: 0.2s;
+    display: block;
+    content: "";
+    width: 30px;
+    height: 2px;
+  }
 
-    #btn-mobile-span::before{
-        border-top: 2px solid var(--blue);
-        position: relative;
-        transition: .2s;
-        display: block;
-        margin-top:5px;
-        content: "";
-        width: 30px;
-        height: 2px;
-    
-    }
+  #btn-mobile-span::before {
+    border-top: 2px solid var(--blue);
+    position: relative;
+    transition: 0.2s;
+    display: block;
+    margin-top: 5px;
+    content: "";
+    width: 30px;
+    height: 2px;
+  }
 
-    #btn-mobile-span::after{
-        border-top:2px solid var(--blue);
-        position:relative;
-        margin-top:5px;
-        transition:.2s;
-        display:block;
-        height:2px;
-        width:30px;
-        content:"";
-    }
-    .edition-indicator-mobile{
-        display: block;
-    }
-    #check-menu:checked + .btn-mobile .edition-indicator {
-        display: none;
-    }
+  #btn-mobile-span::after {
+    border-top: 2px solid var(--blue);
+    position: relative;
+    margin-top: 5px;
+    transition: 0.2s;
+    display: block;
+    height: 2px;
+    width: 30px;
+    content: "";
+  }
+  .edition-indicator-mobile {
+    display: block;
+  }
+  #check-menu:checked + .btn-mobile .edition-indicator {
+    display: none;
+  }
 
-    #check-menu-mobile:checked + #edition-mobile-conteiner .edition-indicator-mobile {
-        transform:rotate(90deg);
-        transition: .5s;
-    }
+  #check-menu-mobile:checked
+    + #edition-mobile-conteiner
+    .edition-indicator-mobile {
+    transform: rotate(90deg);
+    transition: 0.5s;
+  }
 
-    #check-menu:checked + .btn-mobile #btn-mobile-span {
-        border-top-color: transparent;
-        top: -10px;
-    }
-    #check-menu:checked + .btn-mobile #btn-mobile-span::before{
-        transform: rotate(135deg);
-        transition: .5s;
-        top: 9px;
-        
-    }
-    #check-menu:checked + .btn-mobile #btn-mobile-span::after{
-        transform: rotate(-135deg);
-        transition: .5s;
-    }
+  #check-menu:checked + .btn-mobile #btn-mobile-span {
+    border-top-color: transparent;
+    top: -10px;
+  }
+  #check-menu:checked + .btn-mobile #btn-mobile-span::before {
+    transform: rotate(135deg);
+    transition: 0.5s;
+    top: 9px;
+  }
+  #check-menu:checked + .btn-mobile #btn-mobile-span::after {
+    transform: rotate(-135deg);
+    transition: 0.5s;
+  }
 
-    #check-menu:checked + .btn-mobile #conteiner-menu {
-        background: var(--background);
-        overflow-y: visible;
-        position: absolute;
-        transition: .5s;
-        display: block ;
-        height: 500px;
-        width: 200px;
-        right: 0px;
-    }
+  #check-menu:checked + .btn-mobile #conteiner-menu {
+    background: var(--background);
+    overflow-y: visible;
+    position: absolute;
+    transition: 0.5s;
+    display: block;
+    height: 500px;
+    width: 200px;
+    right: 0px;
+  }
 
-    #check-menu-mobile:checked + #edition-mobile-conteiner .option{
-        background: var(--background);
-        overflow-y: visible;
-        visibility: visible;
-        border-bottom: none;
-        position: absolute;
-        transition: .4s;
-        display: block;
-        height: 505px;
-        right: 200px;
-        top: -5px;
-    }
-
-
+  #check-menu-mobile:checked + #edition-mobile-conteiner .option {
+    background: var(--background);
+    overflow-y: visible;
+    visibility: visible;
+    border-bottom: none;
+    position: absolute;
+    transition: 0.4s;
+    display: block;
+    height: 505px;
+    right: 200px;
+    top: -5px;
+  }
 }
 /*This Media quary will only work on devices with a screen less than 428px wide("smartphone")*/
-@media(max-width:428px){
-    .logo-desktop{
-        display: none;
-    }
-    .logo-mobile {
-        display: block;
-    }
-    .logo{
-        text-align: center;
-        max-height: 52.8px;
-        max-width: 54px;
-    }
+@media (max-width: 428px) {
+  .logo-desktop {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+  }
+  .logo {
+    text-align: center;
+    max-height: 52.8px;
+    max-width: 54px;
+  }
 
-    #check-menu:checked + .btn-mobile #conteiner-menu{
-        width: 200px;
-    }
+  #check-menu:checked + .btn-mobile #conteiner-menu {
+    width: 200px;
+  }
 
-    #check-menu-mobile:checked + #edition-mobile-conteiner .option{
-        transition: .4s;
-        right: 200px;
-    }
+  #check-menu-mobile:checked + #edition-mobile-conteiner .option {
+    transition: 0.4s;
+    right: 200px;
+  }
 }
