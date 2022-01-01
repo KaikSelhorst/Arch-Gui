@@ -105,6 +105,9 @@ the "Edition" menu option only happen above 769px width(screen)*/
   }
 
   /*These styles make that when the mouse hovers over the edition, the menu appears */
+  .option {
+    transition-delay: 0.5s;
+  }
   .edition:hover .option {
     visibility: visible;
     position: absolute;
