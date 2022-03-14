@@ -8,12 +8,12 @@
 - HTML5
 - CSS3
 
-#### Ferramentas De Design
+#### Design Tools
 
 - FIGMA
 - [Design](https://www.figma.com/file/K31e3ZdN0yuGI6pDNPbRnG/Arch-Gui?node-id=0%3A1)
 
-#### Hospedagem Do Projeto
+#### Project Hosting
 
 - GitHub Pages
 - [Online](https://kaikselhorst.github.io/Arch-Gui/)
