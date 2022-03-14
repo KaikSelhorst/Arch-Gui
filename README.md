@@ -4,7 +4,6 @@
 
 #### Languages Used
 
-- JAVASCRIPT
 - HTML5
 - CSS3
 
